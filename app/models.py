@@ -9,3 +9,11 @@ class Todo(Base):
     title = Column(String, nullable=False)
     description = Column(String, nullable=True)
     completed = Column(Boolean, default=False)
+    due_data = Column(Date, nullable=True)
+
+class User(Base):
+    __tablename__ = "Wu_Yi_Chen"
+    id = Column(Integer, primary_key=True, index=True)
+    username = Column(String, nullable=False)
+    password = Column(String, nullable=True)
+    email = Column(String, nullable=False)
